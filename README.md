@@ -14,3 +14,5 @@ to install all libraries just download the requirements.txt go to it's directory
 pip requirements.txt
 ``
 also __python 3.12__ recommended
+
+if you have any questions/issues lmk in the issues tab or wherever :3
