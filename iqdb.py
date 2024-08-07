@@ -124,7 +124,10 @@ def show_best_match(html_content):
                     print(img_link)
                     # Update the link label text and make it clickable
                     link_label.config(text="Best match found: Click here", fg="blue", cursor="hand2")
-                    link_label.bind("<Button-1>", lambda e: open_in_browser("http:" + img_link))
+                    if img_link.startswith('//'):
+                        link_label.bind("<Button-1>", lambda e: open_in_browser("http:" + img_link))
+                    else:
+                        link_label.bind("<Button-1>", lambda e: open_in_browser(img_link))
                 else:
                     print("No href attribute found in the 'Best match' row link.")
                     link_label.config(text="No href attribute found in the 'Best match' row link.")
