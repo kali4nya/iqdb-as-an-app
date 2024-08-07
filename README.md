@@ -4,7 +4,7 @@ Core functionality of iqdb.org in a simple python app format
 IQDB is a simple "Multi-service image search" as they call themselves, however
 I think that their website is pretty boring-looking so I made an app that uses
 their service and looks (in my opinion) still simple but better, with some quality
-of life things like togglable 'always on top'
+of life things like togglable 'always on top' and support for .webp files
 
 anyways to use it you just need to download and run the iqdb.py
 but you will need some libraries which are provided in the requirements.txt file
