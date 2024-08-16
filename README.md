@@ -11,7 +11,7 @@ but you will need some libraries which are provided in the requirements.txt file
 with versions I tested the app on (newer versions should work fine)
 to install all libraries just download the requirements.txt go to it's directory and run
 ``
-pip requirements.txt
+pip install -r requirements.txt
 ``
 also __python 3.12__ recommended
 
