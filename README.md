@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ``
 also __python 3.12__ recommended
 
-neweset update: at the top of iqdb.py there is now variable set to "path_to_your_browser",
+**NEWEST UPDATE:** at the top of iqdb.py there is now variable set to "path_to_your_browser",
 you can set it to your browser path if you want to use other than default browser
 ```py
 browser_path = "path_to_your_browser"
