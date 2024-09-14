@@ -16,9 +16,9 @@ pip install -r requirements.txt
 also __python 3.12__ recommended
 
 **NEWEST UPDATE:** at the top of iqdb.py there is now variable set to "path_to_your_browser",
-you can set it to your browser path if you want to use other than default browser **e.g.** C:/Program Files/Mozilla Firefox/firefox.exe
+you can set it to your browser path if you want to use other than default browser **e.g.**
 ```py
-browser_path = "path_to_your_browser"
+browser_path = "C:/Program Files/Mozilla Firefox/firefox.exe"
 ```
 
 If you have any questions/issues lmk in the issues tab or wherever :3
