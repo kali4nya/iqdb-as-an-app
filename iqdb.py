@@ -8,6 +8,16 @@ import threading
 import os
 import tempfile
 
+browser_path = "path_to_your_browser"
+
+if browser_path and os.path.isfile(browser_path):
+    try:
+        webbrowser.register('my_browser', None, webbrowser.BackgroundBrowser(browser_path))
+    except Exception as e:
+        print(f"Error registering browser: {e}. Falling back to the default browser.")
+        browser_path = ""  # Set to empty if registration fails
+else:
+    browser_path = ""
 
 def drop(event):
     global temp_file_path
@@ -147,8 +157,17 @@ def on_button_click():
 
 
 def open_in_browser(url):
-    webbrowser.open(url)
-
+    try:
+        if browser_path:
+            # Use the registered browser to open the URL
+            webbrowser.get('my_browser').open(url)
+        else:
+            # Fall back to the default browser
+            webbrowser.open(url)
+    except webbrowser.Error as e:
+        # If there's an error, fall back to the default browser
+        print(f"Error: {e}. Falling back to the default browser.")
+        webbrowser.open(url)
 
 def toggle_always_on_top():
     if always_on_top_var.get():
@@ -166,7 +185,7 @@ def delete_temp_image():
 
 root = TkinterDnD.Tk()  # Use TkinterDnD.Tk instead of tk.Tk
 root.title("IQDB Image Search")
-root.geometry("400x400")
+root.geometry("250x400")
 
 
 image_label = tk.Label(root, text="Drop an image here", width=50, height=15, relief="solid")
